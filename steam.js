@@ -17,17 +17,14 @@
     const nextGame = document.getElementsByClassName('next_in_queue_content')["0"]; // next game in queue
 
     try {
-        if(firstQueue != undefined) {
+        if (firstQueue !== undefined && firstQueue !== null) {
             firstQueue.click();
-        }
-        else if(newQueue != undefined) {
+        } else if (newQueue !== undefined && newQueue !== null) {
             newQueue.click();
-        }
-        else {
+        } else {
             nextGame.click();
         }
-    }
-    catch(err) {
-        console.log('Error');
+    } catch(err) {
+        console.error('Error: ', err);
     }
 })();
